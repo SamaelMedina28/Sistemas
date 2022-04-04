@@ -62,6 +62,7 @@ add.addEventListener("click",()=>{
     const transaction=db.transaction([`ListaActividades`],`readwrite`)
     const objectStore=transaction.objectStore(`ListaActividades`)
     const request=objectStore.add(actividad)
+    location.reload()
 })
 
 peticion.onerror=()=>{
