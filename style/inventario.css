@@ -10,6 +10,17 @@ section .title_section {
   padding: 17px 12px;
   margin-bottom: 20px;
 }
+section .title_section .options {
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  background-color: #cfcfcf;
+  font-size: 14px;
+  cursor: pointer;
+}
+section .title_section .whatching {
+  background-color: #f0f0f0;
+}
 section .add_button {
   display: block;
   background-color: rgba(0, 115, 54, 0.7607843137);
@@ -34,10 +45,6 @@ section .pc_added {
 section .pc_added div {
   line-height: 30px;
   border: 1px solid white;
-  padding-left: 10px;
-}
-section .pc_added .title_colum {
-  font-weight: bold;
   padding-left: 10px;
 }
 section form {
@@ -81,6 +88,43 @@ section form label {
 
 .inactive {
   background-color: rgba(255, 116, 116, 0.6745098039);
+}
+
+.hidden {
+  display: none;
+}
+
+.batery_added {
+  background-color: rgb(210, 210, 210);
+  width: 96%;
+  margin: 20px auto;
+  font-size: 17px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.batery_added div {
+  line-height: 30px;
+  border: 1px solid white;
+  padding-left: 10px;
+}
+
+.monitor_added {
+  background-color: rgb(210, 210, 210);
+  width: 96%;
+  margin: 20px auto;
+  font-size: 17px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.monitor_added div {
+  line-height: 30px;
+  border: 1px solid white;
+  padding-left: 10px;
+}
+
+.title_colum {
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=inventario.css.map */

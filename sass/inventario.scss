@@ -12,6 +12,18 @@ section{
         display: block;
         padding: 17px 12px;
         margin-bottom: 20px;
+        
+        .options{
+            height: 30px;
+            padding: 0 10px;
+            border: none;
+            background-color: #cfcfcf;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .whatching{
+            background-color: #f0f0f0;
+        }
     }
     .add_button{
         display: block;
@@ -36,10 +48,6 @@ section{
         div{
             line-height: 30px;
             border: 1px solid white;
-            padding-left: 10px;
-        }
-        .title_colum{
-            font-weight: bold;
             padding-left: 10px;
         }
     }
@@ -83,4 +91,40 @@ section{
 }
 .inactive{
     background-color: #ff7474ac;
+}
+
+.hidden{
+    display: none;
+}
+
+.batery_added{
+    background-color: $secundary;
+    width: 96%;
+    margin: 20px auto;
+    font-size: 17px;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    div{
+        line-height: 30px;
+        border: 1px solid white;
+        padding-left: 10px;
+    }
+}
+
+.monitor_added{
+    background-color: $secundary;
+    width: 96%;
+    margin: 20px auto;
+    font-size: 17px;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    div{
+        line-height: 30px;
+        border: 1px solid white;
+        padding-left: 10px;
+    }
+}
+.title_colum{
+    font-weight: bold;
+    padding-left: 10px;
 }

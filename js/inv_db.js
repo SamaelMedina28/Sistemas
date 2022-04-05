@@ -89,3 +89,87 @@ add.addEventListener("click",()=>{
 
 peticion.onerror=()=>{
     console.log(`Error`,error)}
+
+const baterias = document.getElementById("baterias")
+const monitores = document.getElementById("monitores")
+const licencias = document.getElementById("licencias")
+const historial = document.getElementById("historial")
+const equipos = document.getElementById("equipos")
+
+const equipos_box = document.getElementById("equipos_box")
+const baterias_box = document.getElementById("baterias_box")
+const monitores_box = document.getElementById("monitores_box")
+const licencias_box = document.getElementById("licencias_box")
+const historial_box = document.getElementById("historial_box")
+
+
+equipos.addEventListener("click", ()=>{
+    monitores.classList.remove("whatching")
+    equipos.classList.add("whatching")
+    baterias.classList.remove("whatching")
+    licencias.classList.remove("whatching")
+    historial.classList.remove("whatching")
+
+    equipos_box.classList.remove("hidden")
+    baterias_box.classList.add("hidden")
+    monitores_box.classList.add("hidden")
+    licencias_box.classList.add("hidden")
+    historial_box.classList.add("hidden")
+})
+baterias.addEventListener("click", ()=>{
+    baterias.classList.add("whatching")
+    equipos.classList.remove("whatching")
+    monitores.classList.remove("whatching")
+    licencias.classList.remove("whatching")
+    historial.classList.remove("whatching")
+
+    equipos_box.classList.add("hidden")
+    baterias_box.classList.remove("hidden")
+    monitores_box.classList.add("hidden")
+    licencias_box.classList.add("hidden")
+    historial_box.classList.add("hidden")
+})
+
+monitores.addEventListener("click", ()=>{
+    monitores.classList.add("whatching")
+    equipos.classList.remove("whatching")
+    baterias.classList.remove("whatching")
+    licencias.classList.remove("whatching")
+    historial.classList.remove("whatching")
+
+    equipos_box.classList.add("hidden")
+    baterias_box.classList.add("hidden")
+    monitores_box.classList.remove("hidden")
+    licencias_box.classList.add("hidden")
+    historial_box.classList.add("hidden")
+})
+
+licencias.addEventListener("click", ()=>{
+    monitores.classList.remove("whatching")
+    equipos.classList.remove("whatching")
+    baterias.classList.remove("whatching")
+    licencias.classList.add("whatching")
+    historial.classList.remove("whatching")
+
+    equipos_box.classList.add("hidden")
+    baterias_box.classList.add("hidden")
+    monitores_box.classList.add("hidden")
+    licencias_box.classList.remove("hidden")
+    historial_box.classList.add("hidden")
+})
+
+historial.addEventListener("click", ()=>{
+    monitores.classList.remove("whatching")
+    equipos.classList.remove("whatching")
+    baterias.classList.remove("whatching")
+    licencias.classList.remove("whatching")
+    historial.classList.add("whatching")
+
+    equipos_box.classList.add("hidden")
+    baterias_box.classList.add("hidden")
+    monitores_box.classList.add("hidden")
+    licencias_box.classList.add("hidden")
+    historial_box.classList.remove("hidden")
+})
+
+

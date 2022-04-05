@@ -28,48 +28,230 @@
     </nav>
 
     <section>
-        <span class="title_section">Inventario</span>
-        <form>
-            <div>
-                <label for="">ID</label>
-                <input type="number" id="identify">
-            </div>
-            <div>
-                <label for="">Marca</label>
-                <input type="text" id="marca">
-            </div>
-            <div>
-                <label for="">Modelo</label>
-                <input type="text" id="modelo">
-            </div>
-            <div>
-                <label for="">Año</label>
-                <input type="text" id="year">
-            </div>
-            <div>
-                <label for="">Propietario</label>
-                <input type="text" id="propietario">
-            </div>
-            <div>
-                <label for="">Estado</label>
-                <select id="estado">
-                    <option>Disponible</option>
-                    <option>En uso</option>
-                    <option>Inactiva</option>
-                </select>
-            </div>
-            
-        </form>
-        <button class="add_button" type="submit" id="add">Agregar equipo</button>
+        <div class="title_section">
+            <span>Inventario:</span>
+            <button class="whatching options" id="equipos">Equipos</button>
+            <button class="options" id="baterias">Baterias</button>
+            <button class="options" id="monitores">Monitores</button>
+            <button class="options" id="licencias">Licencias</button> 
+            <button class="options" id="historial">Historial</button>
+        </div>
 
-        <article class="pc_added" id="box">
-            <div class="title_colum">ID</div>
-            <div class="title_colum">Marca</div>
-            <div class="title_colum">Modelo</div>
-            <div class="title_colum">Año</div>
-            <div class="title_colum">Propietario</div>
-            <div class="title_colum">Estado</div>
-        </article>
+<!-- * Inventario equipos -->
+        <div id="equipos_box">
+
+            <form>
+                <div>
+                    <label for="">ID</label>
+                    <input type="number" id="identify">
+                </div>
+                <div>
+                    <label for="">Marca</label>
+                    <input type="text" id="marca">
+                </div>
+                <div>
+                    <label for="">Modelo</label>
+                    <input type="text" id="modelo">
+                </div>
+                <div>
+                    <label for="">Año</label>
+                    <input type="text" id="year">
+                </div>
+                <div>
+                    <label for="">Propietario</label>
+                    <input type="text" id="propietario">
+                </div>
+                <div>
+                    <label for="">Estado</label>
+                    <select id="estado">
+                        <option>Disponible</option>
+                        <option>En uso</option>
+                        <option>Inactiva</option>
+                    </select>
+                </div>
+                
+            </form>
+            <button class="add_button" type="submit" id="add">Agregar equipo</button>
+    
+            <article class="pc_added" id="box">
+                <div class="title_colum">ID</div>
+                <div class="title_colum">Marca</div>
+                <div class="title_colum">Modelo</div>
+                <div class="title_colum">Año</div>
+                <div class="title_colum">Propietario</div>
+                <div class="title_colum">Estado</div>
+            </article>
+        </div>
+
+<!-- * Inventario baterias-->
+        <div id="baterias_box" class="hidden">
+            <form>
+                <div>
+                    <label for="">ID</label>
+                    <input type="number" id="identify_bateria">
+                </div>
+                <div>
+                    <label for="">Marca</label>
+                    <input type="text" id="marca_bateria">
+                </div>
+                <div>
+                    <label for="">Propietario</label>
+                    <input type="text" id="propietario_bateria">
+                </div>
+                <div>
+                    <label for="">Estado</label>
+                    <select id="estado_bateria">
+                        <option>Disponible</option>
+                        <option>En uso</option>
+                        <option>Inactiva</option>
+                        <option>En revision</option>
+                    </select>
+                </div>
+            </form>
+            <button class="add_button" type="submit" id="add_batery">Agregar bateria</button>
+    
+            <article class="batery_added" id="box_bateria">
+                <div class="title_colum">ID</div>
+                <div class="title_colum">Marca</div>
+                <div class="title_colum">Propietario</div>
+                <div class="title_colum">Estado</div>
+            </article>
+        </div>
+
+<!-- * Inventario Monitores-->
+        <div id="monitores_box" class="hidden">
+            <form>
+                <div>
+                    <label for="">ID</label>
+                    <input type="number" id="identify_monitor">
+                </div>
+                <div>
+                    <label for="">Marca</label>
+                    <input type="text" id="marca_monitor">
+                </div>
+                <div>
+                    <label for="">Modelo</label>
+                    <input type="text" id="modelo_monitor">
+                </div>
+                <div>
+                    <label for="">Año</label>
+                    <input type="text" id="year_monitor">
+                </div>
+                <div>
+                    <label for="">Propietario</label>
+                    <input type="text" id="propietario_monitor">
+                </div>
+                <div>
+                    <label for="">Estado</label>
+                    <select id="estado_monitor">
+                        <option>Disponible</option>
+                        <option>En uso</option>
+                        <option>Inactiva</option>
+                    </select>
+                </div>
+                
+            </form>
+            <button class="add_button" type="submit" id="add_monitor">Agregar equipo</button>
+    
+            <article class="monitor_added" id="box_monitor">
+                <div class="title_colum">ID</div>
+                <div class="title_colum">Marca</div>
+                <div class="title_colum">Modelo</div>
+                <div class="title_colum">Año</div>
+                <div class="title_colum">Propietario</div>
+                <div class="title_colum">Estado</div>
+            </article>
+        </div>
+
+<!-- * Inventario Licencias-->
+        <div id="licencias_box" class="hidden">
+            <form>
+                <div>
+                    <label for="">ID</label>
+                    <input type="number" id="identify_licencia">
+                </div>
+                <div>
+                    <label for="">Marca</label>
+                    <input type="text" id="marca_licencia">
+                </div>
+                <div>
+                    <label for="">Modelo</label>
+                    <input type="text" id="modelo_licencia">
+                </div>
+                <div>
+                    <label for="">Año</label>
+                    <input type="text" id="year_licencia">
+                </div>
+                <div>
+                    <label for="">Propietario</label>
+                    <input type="text" id="propietario_licencia">
+                </div>
+                <div>
+                    <label for="">Estado</label>
+                    <select id="estado_licencia">
+                        <option>Disponible</option>
+                        <option>En uso</option>
+                        <option>Inactiva</option>
+                    </select>
+                </div>
+                
+            </form>
+            <button class="add_button" type="submit" id="add_licencia">Agregar equipo</button>
+    
+            <article class="pc_added" id="box_licencia">
+                <div class="title_colum">ID</div>
+                <div class="title_colum">Marca</div>
+                <div class="title_colum">Modelo</div>
+                <div class="title_colum">Año</div>
+                <div class="title_colum">Propietario</div>
+                <div class="title_colum">Estado</div>
+            </article>
+        </div>
+
+<!-- * Historial de equipos-->
+        <div id="historial_box" class="hidden">
+            <form>
+                <div>
+                    <label for="">ID</label>
+                    <input type="number" id="identify_historial">
+                </div>
+                <div>
+                    <label for="">Marca</label>
+                    <input type="text" id="marca_historial">
+                </div>
+                <div>
+                    <label for="">Modelo</label>
+                    <input type="text" id="modelo_historial">
+                </div>
+                <div>
+                    <label for="">Año</label>
+                    <input type="text" id="year_historial">
+                </div>
+                <div>
+                    <label for="">Propietario</label>
+                    <input type="text" id="propietario_historial">
+                </div>
+                <div>
+                    <label for="">Estado</label>
+                    <select id="estado_historial">
+                        <option>Disponible</option>
+                        <option>En uso</option>
+                        <option>Inactiva</option>
+                    </select>
+                </div>
+                
+            </form>
+            <button class="add_button" type="submit" id="add_historial">Agregar equipo</button>
+    
+            <article class="pc_added" id="box_historial">
+                <div class="title_colum">ID</div>
+                <div class="title_colum">Marca</div>
+                <div class="title_colum">Modelo</div>
+                <div class="title_colum">Año</div>
+                <div class="title_colum">Propietario</div>
+                <div class="title_colum">Estado</div>
+            </article>
+        </div>
     </section>
 
     <script src="../js/inv_db.js"></script>
