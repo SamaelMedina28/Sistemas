@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/nav.css">
+    <link rel="stylesheet" href="../style/inventario.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <title>Reportes</title>
+    <title>Inventario</title>
 </head>
 <body>
     <nav>
@@ -20,10 +21,57 @@
         <ul>
             <li><a href="actividades.html">Actividades</a></li>
             <li><a href="reportes.html" >Reportes</a></li>
-            <li><a href="inventario.html">Inventario</a></li>
-            <li><a href="compras.html" class="active">Compras</a></li>
+            <li><a href="inventario.html" class="active">Inventario</a></li>
+            <li><a href="compras.html">Compras</a></li>
             <li><a href="documentos.html">Documentos</a></li>
         </ul>
     </nav>
+
+    <section>
+        <span class="title_section">Inventario</span>
+        <form>
+            <div>
+                <label for="">ID</label>
+                <input type="number" id="identify">
+            </div>
+            <div>
+                <label for="">Marca</label>
+                <input type="text" id="marca">
+            </div>
+            <div>
+                <label for="">Modelo</label>
+                <input type="text" id="modelo">
+            </div>
+            <div>
+                <label for="">Año</label>
+                <input type="text" id="year">
+            </div>
+            <div>
+                <label for="">Propietario</label>
+                <input type="text" id="propietario">
+            </div>
+            <div>
+                <label for="">Estado</label>
+                <select id="estado">
+                    <option>Disponible</option>
+                    <option>En uso</option>
+                    <option>Inactiva</option>
+                </select>
+            </div>
+            
+        </form>
+        <button class="add_button" type="submit" id="add">Agregar equipo</button>
+
+        <article class="pc_added" id="box">
+            <div class="title_colum">ID</div>
+            <div class="title_colum">Marca</div>
+            <div class="title_colum">Modelo</div>
+            <div class="title_colum">Año</div>
+            <div class="title_colum">Propietario</div>
+            <div class="title_colum">Estado</div>
+        </article>
+    </section>
+
+    <script src="../js/inv_db.js"></script>
 </body>
 </html>
