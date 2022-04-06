@@ -127,4 +127,36 @@ section form label {
   padding-left: 10px;
 }
 
+.gbs {
+  margin-top: 5px;
+}
+
+.user_added {
+  background-color: rgb(210, 210, 210);
+  width: 98%;
+  margin: 20px auto;
+  font-size: 17px;
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+}
+.user_added div {
+  line-height: 30px;
+  border: 1px solid white;
+  padding-left: 10px;
+}
+
+.userlic_added {
+  background-color: rgb(210, 210, 210);
+  width: 99%;
+  margin: 20px auto;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 140px 140px repeat(2, 1fr) 130px 1fr;
+}
+.userlic_added div {
+  line-height: 30px;
+  border: 1px solid white;
+  padding-left: 10px;
+}
+
 /*# sourceMappingURL=inventario.css.map */
