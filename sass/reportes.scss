@@ -1,0 +1,141 @@
+
+    $primary: #007336c2;
+    $secundary: rgb(210, 210, 210);
+
+section{
+    width: 90%;
+    margin: 30px auto;
+    padding-bottom: 20px;
+    background-color: white;
+    .title_section{
+        border-bottom: 1px solid rgb(210, 210, 210);
+        display: block;
+        padding: 17px 12px;
+        margin-bottom: 20px;
+        .options{
+            height: 30px;
+            padding: 0 10px;
+            border: none;
+            background-color: #cfcfcf;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .whatching{
+            background-color: #f0f0f0;
+        }
+    }
+    .add_button{
+        display: block;
+        background-color: $primary;
+        color: #fff;
+        border: none;
+        padding: 11px;
+        font-size: 14px;
+        margin: auto;
+        cursor: pointer;
+    }
+    .add_button:hover{
+        background-color: #005528c2;
+    }
+    
+    form{
+        margin: auto;
+        width: 400px;
+        text-align: center;
+        .area_info{
+            width: 100%;
+            height: 100px;
+            resize: none;
+            padding: 5px;
+        }
+        .area_info:focus input:focus{
+            outline: none;
+        }
+        div{
+            margin: 5px auto 20px auto;
+            input{
+                width: 100%;
+                margin-top: 5px;
+                height: 30px;
+            }
+            label{
+                color: rgb(161, 0, 0);
+                display: block;
+            }
+        }
+
+    }
+}
+
+.added{
+    background-color: $secundary;
+    width: 96%;
+    margin: 20px auto;
+    font-size: 17px;
+    .reporte{
+        border-bottom: 2px solid white;
+        strong{
+            padding: 5px;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: 6fr 1fr; 
+            padding-left: 20px;
+            padding-top: 15px;
+            li{
+                padding: 10px;
+            }
+        }
+        button{
+            background-color: $primary;
+            color: white;
+            border: none;
+            height: 30px;
+            width: 110px;
+            display: block;
+            margin: 10px auto 15px auto;
+        }
+        button:hover{
+            background-color: #005528c2;
+        }
+    }
+}
+
+.termi-reportes{
+    font-size: 30px;
+    padding-left: 20px;
+}
+.added{
+    strong{
+        font-size: 20px;
+        padding-left: 20px;
+        display: block;
+        padding-top: 10px;
+    }
+    .grid-terminado{
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        padding-left: 20px;
+        li{
+            padding: 5px;
+            border-bottom: 1px solid white;
+        }
+    }
+    img{
+        display: block;
+        margin: auto;
+        width: 45px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    img:hover{
+        width: 50px;
+    }
+}
+
+.hidden{
+    display: none;
+}

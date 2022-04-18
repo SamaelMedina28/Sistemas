@@ -363,7 +363,103 @@ peticion_user.onerror=()=>{
 
 
 
+// & historial´s Database
+let add_historial = document.getElementById("add_historial") 
+let box_historial = document.getElementById("box_historial")
+
+let identify_historial =  document.getElementById("identify_historial")
+let pc_historial =  document.getElementById("pc_historial")
+let actual_historial =  document.getElementById("actual_historial")
+let gb1_historial =  document.getElementById("gb1_historial")
+let anterior1_historial =  document.getElementById("anterior1_historial")
+let gb2_historial =  document.getElementById("gb2_historial")
+let anterior2_historial =  document.getElementById("anterior2_historial")
+let gb3_historial =  document.getElementById("gb3_historial")
+let anterior3_historial =  document.getElementById("anterior3_historial")
+let gb4_historial =  document.getElementById("gb4_historial")
+
+
+
+
+
+const indexedDb_hist = window.indexedDB
+let db_hist
+const peticion_hist = indexedDb_hist.open(`inventario_hist`,1)
+peticion_hist.onsuccess=()=>{
+    db_hist=peticion_hist.result
+    console.log(`OPEN`,db_hist)
+    readData_hist()
+}
+peticion_hist.onupgradeneeded=()=>{
+    db_hist=peticion_hist.result
+    const objectStore_hist=db_hist.createObjectStore(`ListaHistorial`,{
+        autoIncrement: true
+    })
+    console.log(`CREATE`,db_hist)
+}
+
+// * Leer datos de usuario
+const readData_hist=()=>{
+    const transaction_hist= db_hist.transaction([`ListaHistorial`],`readonly`)
+    const objectStore_hist=transaction_hist.objectStore(`ListaHistorial`)
+    const request_hist=objectStore_hist.openCursor()
+    request_hist.onsuccess = (e)=>{
+        const cursor_hist=e.target.result
+        if(cursor_hist){
+            console.log(cursor_hist.value)  
+            let id_ = document.createElement("div")
+            let pc_ = document.createElement("div")
+            let actual_ = document.createElement("div")
+            let anterior1_ = document.createElement("div")
+            let anterior2_ = document.createElement("div")
+            let anterior3_ = document.createElement("div")
+
+            id_.textContent = cursor_hist.value.hist_id
+            pc_.textContent = cursor_hist.value.hist_pc
+            actual_.textContent = cursor_hist.value.actual + " " + cursor_hist.value.gb1 + "Gb"
+            anterior1_.textContent = cursor_hist.value.anterior1 + " " + cursor_hist.value.gb2 + "Gb" 
+            anterior2_.textContent = cursor_hist.value.anterior2 + " " + cursor_hist.value.gb3 + "Gb"
+            anterior3_.textContent = cursor_hist.value.anterior3 + " " + cursor_hist.value.gb4 + "Gb"
+            
+            box_historial.appendChild(id_)
+            box_historial.appendChild(pc_)
+            box_historial.appendChild(actual_)
+            box_historial.appendChild(anterior1_)
+            box_historial.appendChild(anterior2_)
+            box_historial.appendChild(anterior3_)
+            
+            cursor_hist.continue()
+        }else{
+            console.log("No more data")
+        }
+    }
+}
+
+add_historial.addEventListener("click",()=>{
+    let historial = {
+        hist_id:identify_historial.value,
+        hist_pc:pc_historial.value,
+        actual:actual_historial.value,
+        gb1:gb1_historial.value,
+        anterior1:anterior1_historial.value,
+        gb2:gb2_historial.value,
+        anterior2:anterior2_historial.value,
+        gb3:gb3_historial.value,
+        anterior3:anterior3_historial.value,
+        gb4:gb4_historial.value,
+    }
+    const transaction_hist=db_hist.transaction([`ListaHistorial`],`readwrite`)
+    const objectStore_hist=transaction_hist.objectStore(`ListaHistorial`)
+    const request_hist=objectStore_hist.add(historial)
+    location.reload()
     
+})
+
+peticion_hist.onerror=()=>{
+    console.log(`Error`,error)
+}
+
+
 
 const baterias = document.getElementById("baterias")
 const monitores = document.getElementById("monitores")
@@ -434,6 +530,21 @@ licencias.addEventListener("click", ()=>{
 })
 
 historial.addEventListener("click", ()=>{
+    monitores.classList.remove("whatching")
+    equipos.classList.remove("whatching")
+    baterias.classList.remove("whatching")
+    licencias.classList.remove("whatching")
+    historial.classList.add("whatching")
+
+    equipos_box.classList.add("hidden")
+    baterias_box.classList.add("hidden")
+    monitores_box.classList.add("hidden")
+    licencias_box.classList.add("hidden")
+    historial_box.classList.remove("hidden")
+})
+
+
+add_historial.addEventListener("click",()=>{
     monitores.classList.remove("whatching")
     equipos.classList.remove("whatching")
     baterias.classList.remove("whatching")

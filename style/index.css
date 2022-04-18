@@ -1,0 +1,78 @@
+.container{
+    margin: auto;
+    display: grid;
+    width: 680px;
+    grid-template-columns: 4fr 6fr;
+    margin-top: 18%;
+    height: 400px;
+}
+html{
+    height: 100vh;
+    font-family: sans-serif;
+}
+body{
+    background-color: #32415A;
+    background-image: linear-gradient(to bottom, #e8e8e8 0%, #8c8c8c 100%);
+}
+.info{
+    background-color: #007336c2;
+    background-image: linear-gradient(to bottom, #007336c2 0%, #00a257fa 100%);
+    color: #fff;
+    text-align: center;
+}
+.border_b{
+    border-bottom: 1px solid #c5c5c5;
+    margin: auto;
+    width: 85%;
+    margin-top: 100px;
+}
+strong{
+    font-size: 30px;
+}
+p{
+    font-size: 13px;
+}
+span{
+    display: block;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.access{
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 15px;
+}
+.access form label{
+    display: block;
+}
+.access form img{
+    width: 270px;
+}
+.top-m{
+    margin-top: 40px;
+}
+input{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid #a0a0a0;
+    padding-left: 6px;
+}
+input:focus{
+    outline: 1px solid #969696;
+}
+button{
+    border: none; 
+    background-color: #08793dc2;
+    width: 81%;
+    margin-top: 13px;
+    height: 35px;
+    color: white;
+}
+button:hover{
+    background-color: #005226c2;
+    cursor: pointer;
+}
