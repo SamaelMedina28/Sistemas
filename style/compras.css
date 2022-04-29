@@ -1,0 +1,54 @@
+section {
+  width: 90%;
+  margin: 30px auto;
+  padding-bottom: 20px;
+  background-color: white;
+}
+section .title_section {
+  border-bottom: 1px solid rgb(210, 210, 210);
+  display: block;
+  padding: 17px 12px;
+  margin-bottom: 20px;
+}
+section article {
+  background-color: rgb(210, 210, 210);
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+section article .compras {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  border-bottom: 1px solid white;
+}
+section article .compras .archivo_icon {
+  justify-self: center;
+  align-self: center;
+}
+section article .compras .archivo_icon img {
+  width: 70px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+section article .compras .archivo_icon img:hover {
+  width: 73px;
+}
+section article .compras .info_compra {
+  font-size: 19px;
+  padding-left: 30px;
+  display: grid;
+}
+section article .compras .info_compra li {
+  display: block;
+  padding: 2px;
+  align-self: center;
+}
+section article strong {
+  display: block;
+  text-align: center;
+  padding: 4px;
+}
+
+/*# sourceMappingURL=compras.css.map */

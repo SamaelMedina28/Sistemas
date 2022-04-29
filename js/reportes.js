@@ -1,6 +1,5 @@
 const activos = document.getElementById("activo")
 const terminados = document.getElementById("terminados")
-
 const activos_box = document.getElementById("activos_box")
 const terminados_box = document.getElementById("terminados_box")
 
@@ -25,8 +24,17 @@ terminados.addEventListener("click", ()=>{
 
 const more = document.getElementById("more")
     more.addEventListener("click", ()=>{
+        if (more.textContent=="Ver mas") {
+            more.textContent="Ver menos"
+
+        } else {
+            more.textContent="Ver mas"
+        }
+        
         for (const key in elements) {
             elements[key].classList.toggle("hidden")
         }
-    more.setAttribute(src,"../sources/chevron-up-arrow.svg")
+
 })
+
+// * Inicio de base de datos y funcionalidad

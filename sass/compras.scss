@@ -1,0 +1,56 @@
+
+    $primary: #007336c2;
+    $secundary: rgb(210, 210, 210);
+
+section{
+    width: 90%;
+    margin: 30px auto;
+    padding-bottom: 20px;
+    background-color: white;
+    .title_section{
+        border-bottom: 1px solid rgb(210, 210, 210);
+        display: block;
+        padding: 17px 12px;
+        margin-bottom: 20px;
+    }
+    article{
+        background-color: $secundary;
+        width: 95%;
+        margin: auto;
+        padding: 10px;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+        .compras{
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            border-bottom: 1px solid white;
+            .archivo_icon{
+                justify-self: center;
+                align-self: center;
+                img{
+                    width: 70px;
+                    transition: all .2s;
+                    cursor: pointer;
+                }
+                img:hover{
+                    width: 73px;
+                }
+            }
+            .info_compra{
+                font-size: 19px;
+                padding-left: 30px;
+                display: grid;
+                li{
+                    display: block;
+                    padding: 2px;
+                    align-self: center;
+                }
+            }
+        }
+        strong{
+            display: block;
+            text-align: center;
+            padding: 4px;
+        }
+    }
+}

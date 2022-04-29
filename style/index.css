@@ -3,12 +3,14 @@
     display: grid;
     width: 680px;
     grid-template-columns: 4fr 6fr;
-    margin-top: 18%;
     height: 400px;
 }
 html{
     height: 100vh;
     font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body{
     background-color: #32415A;
@@ -25,6 +27,9 @@ body{
     margin: auto;
     width: 85%;
     margin-top: 100px;
+}
+form{
+    text-align: center;
 }
 strong{
     font-size: 30px;
@@ -71,8 +76,31 @@ button{
     margin-top: 13px;
     height: 35px;
     color: white;
+    font-size: 15px;
+
 }
-button:hover{
+button:hover, .verify:hover{
     background-color: #005226c2;
     cursor: pointer;
+}
+.verifyOf{
+    display: block;
+    background-color: #919191c2;
+    width: 81%;
+    text-align: center;
+    height: 35px;
+    color: white;
+    margin: 13px auto;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: default;
+}
+
+.verifyOn{
+    background-color: #08793dc2;
+    cursor: pointer;
+}
+.verifyOn:hover{
+    background-color: #005226c2;
 }
