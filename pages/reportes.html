@@ -33,6 +33,9 @@
             <button class="whatching options" id="activo">Activo</button>
             <button class="options" id="terminados">Terminados</button>
         </div>
+
+        <!-- * Reportes activos  -->
+
         <div id="activos_box">
             <form>
                 <textarea class="area_info" placeholder="Descripcion de actividad" id="description" required></textarea>
@@ -40,44 +43,27 @@
                     <label for="">Hora</label>
                     <input required id="time" type="time"> 
                 </div>
-                
-            </form>
                 <button class="add_button" type="submit" id="add">Agregar actividad</button>
-    
-    
+            </form>
+                
     
             <article class="added">
                 <div class="reporte">
-                    <div class="ul">
-                        <li>Actividades</li>
-                        <li>Hora</li>
-                        <li>Actividades</li>
-                        <li>Hora</li>
-                        <li>Actividades</li>
-                        <li>Hora</li>
-                        <li>Actividades</li>
-                        <li>Hora</li>
-                        <li>Actividades</li>
-                        <li>Hora</li>
+                    <div class="ul" id="info_add">
                     </div>
-                    <button id="finish">Terminar</button>
+                    <button id="finish" type="submit">Terminar</button>
                 </div>
             </article>
         </div>
 
+
+
+        <!-- * Reportes terminados  -->
         <div id="terminados_box" class="hidden">
             <strong class="termi-reportes">Reportes terminados</strong>
             <article class="added">
                 <strong>Fecha: 22-08-2022</strong>
                 <ul class="grid-terminado">
-                    <li class="hidden select">Actividad</li>
-                    <li class="hidden select">Hora</li>
-                    <li class="hidden select">Actividad</li>
-                    <li class="hidden select">Hora</li>
-                    <li class="hidden select">Actividad</li>
-                    <li class="hidden select">Hora</li>
-                    <li class="hidden select">Actividad</li>
-                    <li class="hidden select">Hora</li>
                     <li class="hidden select">Actividad</li>
                     <li class="hidden select">Hora</li>
                 </ul>

@@ -10,8 +10,8 @@ verificar.addEventListener("click", ()=>{
 
     }else{
         Swal.fire(
-            'Good job!',
-            'You clicked the button!',
+            'Usuario o contraseña incorrecto',
+            'Intentalo de nuevo',
             'error'
           )
     }
